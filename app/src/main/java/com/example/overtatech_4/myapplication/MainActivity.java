@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.mylibrary.ToastUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                ToastUtils.showToast(MainActivity.this,"hi from lib");
             }
         });
     }
